@@ -10,24 +10,25 @@
 #define STRLEN 256
 
 template<typename T>
-static void msort(T* arr, int n);
+void msort(T* arr, int n);
 
 template<typename T>
-static void mergeSort(T* arr, int l, int r);
+void mergeSort(T* arr, int l, int r);
 
 template<typename T>
-static void merge(T* arr, int l, int m, int r);
-static void merge(char** arr, int l, int m, int r);
+void merge(T* arr, int l, int m, int r);
+template<>
+void merge(char** arr, int l, int m, int r);
 
 
 template<typename T>
-static void msort(T* arr, int n)
+void msort(T* arr, int n)
 {
     mergeSort(arr, 0, n-1);
 }
 
 template<typename T>
-static void mergeSort(T* arr, int l, int r)
+void mergeSort(T* arr, int l, int r)
 {
     if (l < r)
     {
@@ -44,7 +45,7 @@ static void mergeSort(T* arr, int l, int r)
 }
 
 template<typename T>
-static void merge(T* arr, int l, int m, int r)
+void merge(T* arr, int l, int m, int r)
 {
     int i, j, k;
     int n1 = m - l + 1;
@@ -101,8 +102,8 @@ static void merge(T* arr, int l, int m, int r)
     delete[]L;
 }
 
-
-static void merge(char** arr, int l, int m, int r)
+template<>
+void merge(char** arr, int l, int m, int r)
 {
     int i, j, k;
     int n1 = m - l + 1;
@@ -136,24 +137,10 @@ static void merge(char** arr, int l, int m, int r)
             i++;
         }
         else
-            if(strlen(L[i]) > strlen(R[j]))
-            {
-                arr[k] = R[j];
-                j++;
-            }
-            else
-            {
-                if (strcmp(L[i], R[i]) == -1)
-                {
-                    arr[k] = L[i];
-                    i++;
-                }
-                else
-                {
-                    arr[k] = R[j];
-                    j++;
-                }
-            }
+        {
+            arr[k] = R[j];
+            j++;
+        }
         k++;
     }
 
