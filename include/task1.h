@@ -113,16 +113,11 @@ void merge(char** arr, int l, int m, int r)
     char** L = new char*[n1];
     char** R = new char*[n2];
 
-    for (i = 0; i < n1; i++)
-        L[i] = new char[STRLEN];
-    for (j = 0; j < n2; j++)
-        R[j] = new char[STRLEN];
-
     /* Copy data to temp arrays L[] and R[] */
     for (i = 0; i < n1; i++)
-        strcpy(L[i], arr[l + i]);
+        L[i] = arr[l + i];
     for (j = 0; j < n2; j++)
-        strcpy(R[j], arr[m + 1 + j]);
+        R[j] = arr[m + 1 + j];
 
     /* Merge the temp arrays back into arr[l..r]*/
 
