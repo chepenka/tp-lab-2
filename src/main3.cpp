@@ -17,7 +17,7 @@ char* change(char* val)
     return "abc";
 }
 
-int main3()
+int main()
 {
     const int n = 5;
     int arr[n]{1, 1, 2, 3, 5};
