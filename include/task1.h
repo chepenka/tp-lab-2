@@ -5,14 +5,12 @@
 #ifndef TP_LAB_2_TASK1_H
 #define TP_LAB_2_TASK1_H
 #include <iostream>
-#include <vector>
 #include<cstring>
 #include <type_traits>
 #define STRLEN 256
-using std::vector;
 
 template<typename T>
-static void mSort(T* arr, int n);
+static void msort(T* arr, int n);
 
 template<typename T>
 static void mergeSort(T* arr, int l, int r);
@@ -23,7 +21,7 @@ static void merge(char** arr, int l, int m, int r);
 
 
 template<typename T>
-static void mSort(T* arr, int n)
+static void msort(T* arr, int n)
 {
     mergeSort(arr, 0, n-1);
 }
