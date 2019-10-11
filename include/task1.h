@@ -82,7 +82,7 @@ void mergeSortAction(T *arr, size_t n, size_t left, size_t right) {
 }
 
 template<typename T>
-void mergeSort(T *arr, size_t n) {
+void msort(T *arr, size_t n) {
     mergeSortAction(arr, n, 0, n);
 }
 #endif /* task1_hpp */

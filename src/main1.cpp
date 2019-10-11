@@ -15,7 +15,7 @@
 int main(int argc, const char * argv[]) {
     const size_t n = 6;
     int *val = new int[n]{5, 3, 2, 4, 1, 6};
-    mergeSort(val, n);
+    msort(val, n);
     for (size_t i = 0; i < n; i++)
         std::cout << val[i] << ' ';
     std::cout << std::endl;
