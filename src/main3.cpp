@@ -17,7 +17,7 @@
 int main(int argc, const char * argv[]) {
     const size_t n = 5;
     int arr[n]{1, 2, 3, 4, 5};
-    map<int, n>(arr, change);
+    map<int, n>(arr, change1);
     for (size_t i = 0; i < n; i++)
         std::cout << arr[i] << ' ';
     std::cout << std::endl;

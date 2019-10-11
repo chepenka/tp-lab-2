@@ -17,7 +17,7 @@
 int main(int argc, const char * argv[]) {
     const size_t n = 5;
     int* arr;
-    arr = createArr<int, n>(gen);
+    arr = createArr<int, n>(gen1);
     for (size_t i = 0; i < n; i++)
         std::cout << arr[i] << ' ';
     std::cout << std::endl;
