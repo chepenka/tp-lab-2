@@ -21,4 +21,5 @@ int main(int argc, const char * argv[]) {
     for (size_t i = 0; i < n; i++)
         std::cout << arr[i] << ' ';
     std::cout << std::endl;
+    return 0;
 }
