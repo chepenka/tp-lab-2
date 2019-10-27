@@ -1,4 +1,4 @@
-#include <string>
+#include <string.h>
 template<typename T> void msort(T* mas, int len)
 {
 	if (len != 1) {
