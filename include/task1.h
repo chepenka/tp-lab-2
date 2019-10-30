@@ -17,7 +17,7 @@ bool cmp(char* &a, char* &b)
 
 
 template <class T>
-void msort(T* mas, const size_t N){
+void msort(T* mas, const int N){
     if(N <= 1)
         return;
     size_t n1 = N / 2;
