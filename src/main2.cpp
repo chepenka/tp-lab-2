@@ -8,7 +8,6 @@ using namespace std;
 
 int main()
 {
-
 	const size_t N = 6;
 	int* NewAr;
 	NewAr = createArr<int, N>(genn);
