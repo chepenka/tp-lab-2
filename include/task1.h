@@ -2,14 +2,14 @@
 #include <string.h>
 
 template <class T>
-bool cmp(T &a, T &b)
+static bool cmp(T &a, T &b)
 {
     return a < b;
 }
 
 
 template<>
-bool cmp(char* &a, char* &b)
+static bool cmp(char* &a, char* &b)
 {
     return strlen(a) < strlen(b);
 }
