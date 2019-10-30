@@ -9,7 +9,7 @@ static bool cmp(T &a, T &b)
 
 
 template<>
-static bool cmp(char* &a, char* &b)
+bool cmp(char* &a, char* &b)
 {
     return strlen(a) < strlen(b);
 }
