@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string.h>
 
 template <typename T>
 void printArr(T* arr, int size) {
@@ -17,7 +18,7 @@ bool compare(T arg1, T arg2) {
 };
 template<>
 bool compare(char* arg1, char* arg2) {
-	if (std::strlen(arg1) < std::strlen(arg2))
+	if (strlen(arg1) < strlen(arg2))
 		return 1;
 	else
 		return 0;
