@@ -4,7 +4,7 @@ int main()
 {
 	const size_t n = 5;
 	int arr[n] = { 1, 2, 3, 4, 5 };
-	map<int, n>(arr, change);
+	map<int, n>(arr, change1);
 	/*double arr[5]{ 1, 2.2, 3.3, 4.4, 5 };
 	map<double, n>(arr, change);*/
 	/*char arr[n]{ '1', '2', '3', '4', '5' };
@@ -20,7 +20,6 @@ int main()
 		arr[i][i + 1] = '\0';
 	}
 	map<char*, n>(arr, change);*/
-	printArr(arr, n);
 
 	return 0;
 }

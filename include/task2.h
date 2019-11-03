@@ -1,22 +1,15 @@
 #pragma once
 #include <iostream>
 
-template <typename T>
-static void printArr(T* arr, int size) {
-	for (int i = 0; i < size; i++)
-		std::cout << arr[i] << ' ';
-	std::cout << std::endl;
-}
-
 template<class T>
-T gen()
+T gen1()
 {
 	static T t = 48;
 	return t++;
 }
 
 template<>
-char* gen()
+char* gen1()
 {
 	static unsigned t = 0;
 	t++;
@@ -29,10 +22,10 @@ char* gen()
 }
 
 template<class T, const size_t N>
-static T* createArr(T (*gen)()) {
+T* createArr(T (*gen1)()) {
 	T* newArray = new T [N];
 	for (int i = 0; i < N; i++) {
-		newArray[i] = gen();
+		newArray[i] = gen1();
 	}
 	return newArray;
 }

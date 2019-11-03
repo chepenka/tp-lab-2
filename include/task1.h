@@ -1,6 +1,13 @@
 #pragma once
 #include <iostream>
 
+template <typename T>
+void printArr(T* arr, int size) {
+	for (int i = 0; i < size; i++)
+		std::cout << arr[i] << ' ';
+	std::cout << std::endl;
+}
+
 template<typename T>
 bool compare(T arg1, T arg2) {
 	if (arg2 > arg1)
@@ -10,18 +17,11 @@ bool compare(T arg1, T arg2) {
 };
 template<>
 bool compare(char* arg1, char* arg2) {
-	if (strlen(arg1) < strlen(arg2))
+	if (std::strlen(arg1) < std::strlen(arg2))
 		return 1;
 	else
 		return 0;
 };
-
-template <typename T>
-static void printArr(T* arr, int size) {
-	for (int i = 0; i < size; i++)
-		std::cout << arr[i] << ' ';
-	std::cout << std::endl;
-}
 
 template <typename T>
 void merge(T* a, int left, int right)

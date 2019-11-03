@@ -1,21 +1,14 @@
 #pragma once
 #include <iostream>
 
-template <typename T>
-static void printArr(T* arr, int size) {
-	for (int i = 0; i < size; i++)
-		std::cout << arr[i] << ' ';
-	std::cout << std::endl;
-}
-
 template<class T>
-T change(T val)
+T change1(T val)
 {
 	return val + 1;
 }
 
 template<>
-char* change(char* val)
+char* change1(char* val)
 {
 	size_t n = strlen(val);
 	for (size_t i = 0; i < n; i++)
@@ -24,8 +17,8 @@ char* change(char* val)
 }
 
 template<class T, const size_t N>
-static T* map(T *array, T (*ñhange)(T)) {
+T* map(T *array, T (*ñhange1)(T)) {
 	for (int i = 0; i < N; i++)
-		array[i] = change(array[i]);
+		array[i] = change1(array[i]);
 	return array;
 }
