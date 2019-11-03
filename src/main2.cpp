@@ -1,4 +1,5 @@
 #include "task2.h"
+#include <string.h>
 
 template<class T>
 T gen()

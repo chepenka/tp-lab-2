@@ -1,4 +1,5 @@
 #include "task3.h"
+#include <string.h>
 
 template<class T>
 T change(T val)
