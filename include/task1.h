@@ -14,20 +14,14 @@ bool cmp(char* a, char* b)
 }
 
 template <typename T>
-void msort(T *array, int n)
-{
-	MSort(array, 0, n - 1);
-}
-
-template <typename T>
-void MSort(T *array, int left, int right)
+void msort(T *array, int left, int right)
 {
 	if (left == right)
 		return;
 	int mid = (left + right) / 2;
 
-	MSort(array, left, mid);
-	MSort(array, mid + 1, right);
+	msort(array, left, mid);
+	msort(array, mid + 1, right);
 	int i = left;					// start first way
 	int j = mid + 1;				//start second way
 	T * tmp = new T[right];
@@ -47,4 +41,9 @@ void MSort(T *array, int left, int right)
 	for (int step = 0; step < right - left + 1; step++)
 		array[left + step] = tmp[step];
 }
-	
+
+template <typename T>
+void msort(T *array, int n)
+{
+	msort(array, 0, n - 1);
+}
