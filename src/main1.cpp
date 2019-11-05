@@ -1,5 +1,5 @@
 #include "task1.h"
-
+#include "string.h"
 
 int main()
 {
