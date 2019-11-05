@@ -1,15 +1,8 @@
 #pragma once
 #include <iostream>
 
-template <typename T>
-static void printArray(T* arr, int size)
-{
-	for(int i=0;i<size;i++)
-	{
-		std::cout << arr[i] << ' ';
-	}
-	std::cout << std::endl;
-}
+
+
 
 template <typename T>
 bool compare(T a, T b)
