@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
 
-template <typename T> static void printArray(T* arr, int size)
+template <typename T>
+static void printArray(T* arr, int size)
 {
 	for(int i=0;i<size;i++)
 	{
@@ -10,20 +11,23 @@ template <typename T> static void printArray(T* arr, int size)
 	std::cout << std::endl;
 }
 
-template <typename T> bool compare(T a, T b)
+template <typename T>
+bool compare(T a, T b)
 {
 	if (a < b)
 		return true;
 	else return false;
 }
-template <> bool compare(char* a, char* b)
+template <>
+bool compare(char* a, char* b)
 {
 	if (strlen(a) < strlen(b))
 		return true;
 	else return false;
 }
 
-template <typename T> void merge(T* arr, int l, int m, int r)
+template <typename T>
+void merge(T* arr, int l, int m, int r)
 {
 	int i, j, k;
 	int n1 = m - l + 1;
@@ -65,7 +69,8 @@ template <typename T> void merge(T* arr, int l, int m, int r)
 	}
 }
 
-template <typename T> void mergeSort(T* arr, int l, int r)
+template <typename T>
+void mergeSort(T* arr, int l, int r)
 {
 	if (l < r)
 	{
@@ -75,7 +80,8 @@ template <typename T> void mergeSort(T* arr, int l, int r)
 		merge(arr, l, m, r);
 	}
 }
-template <typename T> void msort(T* arr, int size)
+template <typename T>
+void msort(T* arr, int size)
 {
 	mergeSort(arr, 0, size - 1);
 }

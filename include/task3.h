@@ -2,7 +2,8 @@
 #include <string.h>
 #include <iostream>
 
-template <typename T> static void printArray(T* arr, int size)
+template <typename T>
+static void printArray(T* arr, int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -11,12 +12,14 @@ template <typename T> static void printArray(T* arr, int size)
 	std::cout << std::endl;
 }
 
-template<class T> T change(T val)
+template<class T>
+T change(T val)
 {
 	return val + 1;
 }
 
-template<> char* change(char* val)
+template<>
+char* change(char* val)
 {
 	size_t n = strlen(val);
 	for (size_t i = 0; i < n; i++)
@@ -24,7 +27,8 @@ template<> char* change(char* val)
 	return val;
 }
 
-template<typename T, const size_t N> T* map(T* arr, T(*change)(T))
+template<typename T, const size_t N>
+T* map(T* arr, T(*change)(T))
 {
 	for (int i = 0; i < N; i++)
 		arr[i] = change(arr[i]);

@@ -11,14 +11,16 @@ static void printArray(T* arr, int size)
 	std::cout << std::endl;
 }
 
-template<typename T> T gen()
+template<typename T>
+T gen()
 {
 	
 	static int t = 48;
 	return t++;
 }
 
-template<> char* gen()
+template<>
+char* gen()
 {
 	
 	static unsigned t = 0;
@@ -32,7 +34,8 @@ template<> char* gen()
 	return s;
 }
 
-template<typename T, const size_t N> T* createArr(T (*gen)())
+template<typename T, const size_t N>
+T* createArr(T (*gen)())
 {
 	T* newArr = new T[N];
 
