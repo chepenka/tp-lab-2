@@ -1,10 +1,5 @@
 #pragma once
-
 #include <iostream>
-
-
-
-
 
 template<typename T, const size_t N>
 T* map(T* arr, T(*change)(T))

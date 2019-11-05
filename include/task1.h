@@ -1,9 +1,6 @@
 #pragma once
 #include <iostream>
-
-
-
-
+#include "string.h"
 template <typename T>
 bool compare(T a, T b)
 {

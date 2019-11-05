@@ -1,8 +1,5 @@
 #pragma once
-
-
-
-
+#include <iostream>
 
 template<typename T, const size_t N>
 T* createArr(T (*gen)())
