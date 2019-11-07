@@ -3,8 +3,8 @@
 #include <iostream>
 using namespace std;
 
-template<typename T>
-T * createArr(T(*pgen)(), int N)
+template<typename T, int N>
+T * createArr(T(*pgen)())
 {
 	T *array = new T[N];
 	for (int i = 0; i < N; i++)

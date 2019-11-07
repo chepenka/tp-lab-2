@@ -18,9 +18,9 @@ T gen2()
 
 int main()
 {
-	int N1 = 10;
+	const int N1 = 10;
 	char * arr1;
-	arr1 = createArr<char>(gen1, N1);
+	arr1 = createArr<char, N1>(gen1);
 	for (int i = 0; i < N1; i++)
 	{
 		cout << arr1[i] << ' ';
@@ -28,9 +28,9 @@ int main()
 	
 	cout << "\n";
 
-	int N2 = 4;
+	const int N2 = 4;
 	int * arr2;
-	arr2 = createArr<int>(gen2, N2);
+	arr2 = createArr<int, N2>(gen2);
 	for (int i = 0; i < N2; i++)
 	{
 		cout << arr2[i] << ' ';
