@@ -11,7 +11,7 @@ T change(T param)
 int main()
 {
 	int arr[5] = { 0, 1, 2, 3, 4};
-	map<int>(arr, change, 5);
+	map<int, 5>(arr, change);
 	for (int i = 0; i < 5; i++)
 	{
 		cout << arr[i] << ' ';
