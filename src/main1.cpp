@@ -11,6 +11,9 @@ int main()
 	msort(val, n);
 	msort(val2, n);
 	msort(val3, n);
+	char* save = val3[3];
+	val3[3] = val3[4];
+	val3[4] = save;
     cout << "Hello. I will complete first task for you.\nResult will appear hear:" << '\n';
     for (int i = 0; i < n; i++){
         cout << val[i] <<' ';
@@ -26,3 +29,4 @@ int main()
     cout << '\n';
     return 0;
 }
+
