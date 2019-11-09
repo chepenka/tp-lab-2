@@ -57,7 +57,7 @@ void merge(char** (&arr), int startPos, int middlePos, int lastPos){
         int posl = 0;
         int posr = 0;
         while ((posl < lengthLeft) && (posr < lengthRight)) {
-            if (strlen(tempLeft[posl]) <= strlen(tempRight[posr])) {
+            if (strlen(tempLeft[posl]) < strlen(tempRight[posr])) {
                 arr[i] = tempLeft[posl];
                 posl++;
             }
