@@ -1,10 +1,30 @@
 #include "task3.h"
-#include "task2.h"
-#include "task1.h"
+
+
+#include <iostream>
+#include <string>
+
+template <class T> void printArr(T* arr, size_t len)
+{
+	for (size_t i = 0; i < len; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+	std::cout << std::endl;
+}
+template <> void printArr(char** arr, size_t len)
+{
+	for (size_t i = 0; i < len; i++)
+	{
+		std::string out(arr[i]);
+		std::cout << out << " ";
+	}
+	std::cout << std::endl;
+}
 
 int main()
 {
-	int* val = createArr<int, 10>(own_gen);
+	int val[] = { 1,2,3,4,5,6,7,8,9,0 };
 
 	printArr(val, 10);
 
