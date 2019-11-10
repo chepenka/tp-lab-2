@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include <vector
+#include <vector>
 
 template<class T> T own_change(T val)
 {

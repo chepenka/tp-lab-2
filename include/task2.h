@@ -2,7 +2,7 @@
 #define __TASK2_H_
 
 #include <string>
-#include <vector
+#include <vector>
 
 template<class T> T own_gen()
 {
