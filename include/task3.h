@@ -2,6 +2,8 @@
 #define __TASK3_H_
 
 #include <iostream>
+#include <string>
+#include <vector
 
 template<class T> T own_change(T val)
 {

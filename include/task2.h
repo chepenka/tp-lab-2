@@ -1,6 +1,8 @@
 #ifndef __TASK2_H_
 #define __TASK2_H_
 
+#include <string>
+#include <vector
 
 template<class T> T own_gen()
 {
