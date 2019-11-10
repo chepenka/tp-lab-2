@@ -25,11 +25,11 @@ template <> void printArr(char** arr, size_t len)
 	std::cout << std::endl;
 }
 
-template <typename T> bool less(T a, T b)
+template <typename T> bool own_less(T a, T b)
 {
 	return a < b;
 }
-template <> bool less(char* a, char* b)
+template <> bool own_less(char* a, char* b)
 {
 	std::string A(a);
 	std::string B(b);
@@ -54,7 +54,7 @@ template <typename T> void merge(T* arr, size_t start, size_t mid, size_t stop)
 	for (; (start + iterator1 < mid) && (mid + iterator2 < stop);)
 	{
 
-		if (less(arr[start + iterator1], arr[mid + iterator2]))
+		if (own_less(arr[start + iterator1], arr[mid + iterator2]))
 		{
 			result[iterator1 + iterator2] = arr[start + iterator1];
 			iterator1++;
