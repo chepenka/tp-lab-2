@@ -1,5 +1,6 @@
 #include "task3.h"
 #include "task2.h"
+#include "task1.h"
 
 int main()
 {
