@@ -8,7 +8,7 @@ template<class T> T own_gen()
 	return t++;
 }
 
-template<typename T, const size_t size> T* createArr(T(*gen)()) {
+template<typename T, size_t size> T* createArr(T(*gen)()) {
 	T* arr = new T[size];
 	for (size_t i = 0; i < size; i++)
 		arr[i] = gen();

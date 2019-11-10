@@ -8,7 +8,7 @@ template<class T> T own_change(T val)
 	return ++val;
 }
 
-template<typename T, const size_t size> void map(T* arr, T(*change)(T val))
+template<typename T, size_t size> void map(T* arr, T(*change)(T val))
 {
 	for (size_t i = 0; i < size; i++)
 	{
