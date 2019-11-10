@@ -5,24 +5,6 @@
 #include <vector>
 #include <iostream>
 
-template <class T> void printArr(T* arr, size_t len)
-{
-	for (size_t i = 0; i < len; i++)
-	{
-		std::cout << arr[i] << " ";
-	}
-	std::cout << std::endl;
-}
-template <> void printArr(char** arr, size_t len)
-{
-	for (size_t i = 0; i < len; i++)
-	{
-		std::string out(arr[i]);
-		std::cout << out << " ";
-	}
-	std::cout << std::endl;
-}
-
 template <typename T> bool own_less(T a, T b)
 {
 	return a < b;
