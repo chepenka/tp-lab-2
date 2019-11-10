@@ -1,7 +1,6 @@
 #ifndef __TASK2_H_
 #define __TASK2_H_
 
-using namespace std;
 
 template<class T> T own_gen()
 {
