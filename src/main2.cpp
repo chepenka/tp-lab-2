@@ -10,7 +10,7 @@ T gen()
 {
     return 1;
 }
-/*
+
 int main(){
     int* arr;
     const int n = 5;
@@ -22,4 +22,4 @@ int main(){
 
     return 0;
 
-}*/
+}
