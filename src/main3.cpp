@@ -3,6 +3,22 @@
 
 using namespace std;
 
+template <typename T>
+T change(T value)
+{
+    return value + 2;
+}
+
+template <>
+char* change(char* str)
+{
+    int n = strlen(str);
+    for (int i = 0; i < n; i++)
+        str[i] = str[i] + 1;
+
+    return str;
+}
+
 void TestStrings()
 {
     char** a = new char*[3];
