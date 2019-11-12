@@ -24,7 +24,7 @@ void msort(T* array, int left, int right)
 	msort(array, mid + 1, right);
 	int i = left;					// start first way
 	int j = mid + 1;				//start second way
-	T* tmp = new T[right+1];
+	T* tmp = new T[right - left + 1];
 	for (int step = 0; step < right - left + 1; step++)
 	{
 		if ((j > right) || (i <= mid && (cmp(array[i], array[j]))))
