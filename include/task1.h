@@ -63,7 +63,7 @@ void MergeSort(T* arr, int start, int end){
     }
 }
 
-template <typename T> void MSort(T* a, int n) {
+template <typename T> void msort(T* a, int n) {
     MergeSort(a, 0, n);
 }
 

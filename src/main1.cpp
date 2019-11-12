@@ -10,7 +10,7 @@ int main() {
     int n = 6;
     int* arrInt = new int[n]{5, 3, 0, 1, 2, 4};
 
-    MSort(arrInt, n);
+    msort(arrInt, n);
     for (int i = 0; i < n; i++) {
         cout << arrInt[i] << ' ';
     }
