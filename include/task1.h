@@ -22,8 +22,11 @@ void MergeSort(T* arr, int start, int end){
     if (end - start < 2)
         return;
     if (end - start == 2) {
-        if (arr[start] > arr[start + 1])
-            swap(arr[start], arr[start + 1]);
+        if (arr[start] > arr[start + 1]) {
+            int t = arr[start];
+            arr[start] = arr[start + 1];
+            arr[start + 1] = t;
+        }
         return;
     }
     MergeSort(arr, start, start + (end - start)/2);
