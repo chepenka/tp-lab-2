@@ -7,7 +7,7 @@
 
 int main() {
 	int arrInt[6] = { 5, 3, 0, 1, 2, 4 };
-	merge<int>(arrInt, 6);
+	msort<int>(arrInt, 6);
 	for (int i = 0; i < 6; i++)
 	{
 		cout << arrInt[i] << " ";
@@ -15,7 +15,7 @@ int main() {
 	cout << endl;
 
 	double arrDouble[6] = { 4.0, 3.0, 2.4, 2.5, 2.1, -1 };
-	merge<double>(arrDouble, 6);
+	msort<double>(arrDouble, 6);
 	for (int i = 0; i < 6; i++) {
 		cout << arrDouble[i] << " ";
 	}
@@ -23,7 +23,7 @@ int main() {
 
 
 	char* arrChar[6] = { (char*)"ffff", (char*)"fff2", (char*)"f", (char*)"ff", (char*)"vvv", (char*)"fffrr" };
-	merge<char*>(arrChar, 6);
+	msort<char*>(arrChar, 6);
 	for (int i = 0; i < 6; i++) {
 		cout << arrChar[i] << " ";
 	}

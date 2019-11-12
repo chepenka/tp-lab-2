@@ -4,7 +4,7 @@
 using namespace std;
 
 template <typename T>
-void merge(T* arr, int n) {
+void msort(T* arr, int n) {
 	int middle = n / 2; // находим середину сортируемой последовательности и рекурсивно вызываем функцию сортировки для каждой половины
 	if (n > 1) { merge(arr, n / 2); }
 	if (n > 1) { merge(arr + (n / 2), n - (n / 2)); }
@@ -30,7 +30,7 @@ void merge(T* arr, int n) {
 }
 
 template <>
-void merge(char** arr, int n) {
+void msort(char** arr, int n) {
 	int middle = n / 2; // находим середину сортируемой последовательности и рекурсивно вызываем функцию сортировки для каждой половины
 	if (n > 1) { merge(arr, n / 2); }
 	if (n > 1) { merge(arr + (n / 2), n - (n / 2)); }
