@@ -6,13 +6,11 @@
 #include <cstring>
 using namespace std;
 int main() {
-    // test 2
-    int n = 6;
-    int* arrInt = new int[n]{5, 3, 0, 1, 2, 4};
+    const size_t n = 6;
+    char* val[n]{(char*)"ffff", (char*)"fff2", (char*)"f", (char*)"ff", (char*)"vvv", (char*)"fffrr"};
+    msort(val, n);
+    char* expected[n]{(char*)"f", (char*)"ff", (char*)"vvv", (char*)"fff2", (char*)"ffff", (char*)"fffrr"};
 
-    msort(arrInt, n);
-    for (int i = 0; i < n; i++) {
-        cout << arrInt[i] << ' ';
-    }
-    cout << endl;
+    for(size_t i = 0; i < n; i++)
+        cout << val[i] << " ";
 }

@@ -19,23 +19,15 @@ bool cmp(char* x, char* y){
 }
 template <typename T>
 void MergeSort(T* arr, int start, int end){
-    if (end - start < 2)
-        return;
-    if (end - start == 2) {
-        if (cmp(arr[start],arr[start + 1])) {
-            T t = arr[start];
-            arr[start] = arr[start + 1];
-            arr[start + 1] = t;
-        }
-        return;
-    }
-    MergeSort(arr, start, start + (end - start)/2);
-    MergeSort(arr, start + (end - start)/2, end);
+
+    int center = start + (end - start)/2;
+    if(center - start > 1) MergeSort(arr, start, center);
+    if(end - center > 1) MergeSort(arr, center, end);
+
 
     T ans[end - start];
     int i = start;
     int j = start + (end - start)/2;
-    int center = start + (end - start)/2;
     int ind = 0;
 
     while(i < center && j < end){

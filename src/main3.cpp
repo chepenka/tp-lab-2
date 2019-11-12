@@ -11,7 +11,7 @@ T change( T value)
 {
     return value + 1;
 }
-
+/*
 int main(){
     const int n1 = 5;
     int arrInt[n1]{ 1, 2, 3, 4, 5 };
@@ -23,4 +23,4 @@ int main(){
     return 0;
 
 
-}
+}*/
