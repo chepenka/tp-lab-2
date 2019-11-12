@@ -3,6 +3,7 @@
 //
 #include "task2.h"
 #include <iostream>
+using namespace std;
 
 template<typename T>
 T gen()
@@ -15,7 +16,7 @@ int main(){
     arr = createArr<int, n>(&gen);
     for(int i = 0; i < n; i++)
     {
-        std::cout << arr[i] << std::endl;
+        cout << arr[i] << endl;
     }
 
     return 0;

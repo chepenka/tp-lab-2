@@ -29,21 +29,38 @@ void MergeSort(T* arr, int start, int end){
     MergeSort(arr, start, start + (end - start)/2);
     MergeSort(arr, start + (end - start)/2, end);
 
-    vector<T> ans;
-    int ans_part_one = start;
-    int ans_center = start + (end - start)/2;
-    int ans_part_two = ans_center;
-    while(ans.size() != end - start){
-        if (ans_part_one >= ans_center || (ans_part_two < end && arr[ans_part_two] <= arr[ans_part_one])) {
-            ans.push_back(arr[ans_part_two]);
-            ans_part_two++;
+    T ans[end - start];
+    int i = start;
+    int j = start + (end - start)/2;
+    int center = start + (end - start)/2;
+    int ind = 0;
+
+    while(i < center && j < end){
+        if(cmp(arr[i], arr[j])) {
+            ans[ind] =arr[i];
+            ind++;
+            i++;
         } else {
-            ans.push_back(arr[ans_part_one]);
-            ans_part_one++;
+            ans[ind] = arr[j];
+            ind++;
+            j++;
         }
     }
-    for (int i = start; i < end; i++)
-        arr[i] = ans[i - start];
+    while(i < center){
+        ans[ind] = arr[i];
+        ind++;
+        i++;
+    }
+    while(j < end) {
+        ans[ind] = arr[j];
+        ind++;
+        j++;
+    }
+    ind = 0;
+    for(int i = start;i < end;i++){
+        arr[i] = ans[ind];
+        ind++;
+    }
 }
 
 template <typename T> void MSort(T* a, int n) {
