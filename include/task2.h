@@ -1,8 +1,8 @@
 #pragma once
-template <typename A, int N> A* createArr(A (*s)()) {
+template <typename A, int N> A* createArr(A (*function)()) {
 	A* arr = new A[N];
 	for (int i = 0; i < N; i++) {
-		arr[i] = s();
+		arr[i] = function();
 	}
 	return arr;
 }
