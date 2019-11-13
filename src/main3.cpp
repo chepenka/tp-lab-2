@@ -13,10 +13,10 @@ T change( T value)
 }
 int main(){
     const int n1 = 5;
-    int arrInt[n1]{ 1, 2, 3, 4, 5 };
-    map<int, n1>(arrInt, change);
+    char arr[n1]{ '1', '2', '3', '4', '5' };
+    map<char, n1>(arr, change);
     for (int i = 0; i < n1; i++)
-        cout << arrInt[i] << " ";
+        cout << arr[i] << " ";
     cout << endl;
 
     return 0;
