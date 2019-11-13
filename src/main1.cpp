@@ -7,7 +7,7 @@ int main()
 	const int n = 5;
 
 	char *array_1[n] = { "I", "~~~~~", "bread", "am", "heheheh" };
-	msort(array_1, n);
+	msort<char*>(array_1, n);
 	for (int i = 0; i < n; i++)
 	{
 		cout << array_1[i] << ' ';
@@ -15,7 +15,7 @@ int main()
 	cout << '\n';
 
 	int array_2[n] = { 12, 32, 54, 79, 0 };
-	msort(array_2, n);
+	msort<int>(array_2, n);
 	for (int i = 0; i < n; i++)
 	{
 		cout << array_2[i] << ' ';
