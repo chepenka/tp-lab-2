@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <cstring>
 #include <cstddef>
-template <typename T>
+template <typename T> 
 bool cmp(T a, T b) {
 	return a < b;
 }
