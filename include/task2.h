@@ -1,0 +1,21 @@
+#ifndef __TASK2_H_
+#define __TASK2_H_
+
+#include <string>
+#include <vector>
+
+template<class T> T own_gen()
+{
+	static int t = 48;
+	return t++;
+}
+
+template<typename T, size_t size> T* createArr(T(*gen)()) {
+	T* arr = new T[size];
+	for (size_t i = 0; i < size; i++)
+		arr[i] = gen();
+	return arr;
+}
+
+#endif //__TASK2_H_
+
