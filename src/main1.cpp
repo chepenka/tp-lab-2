@@ -1,4 +1,4 @@
-#include <iostream>
+/* #include <iostream>
 #include "task1.h"
 
 using namespace std;
@@ -23,4 +23,20 @@ int main() {
 	cin >> n;
 	delete[] mas;
 	return 0;
+} */
+#include <iostream>
+#include "task1.h"
+
+int main() {
+    int array[] = {228,229, 54, 2, 55, 532, 2876};
+    for (int i = 0; i < 7; i++) {
+        std::cout << array[i] << " ";
+    }
+    std::cout << "\n";
+    msort(array,7);
+    for (int i = 0; i < 8; i++) {
+        std::cout << array[i] << " ";
+    }
+    std::cout << "\n";
+    return 0;
 }
